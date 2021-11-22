@@ -5,10 +5,9 @@ PROTO ExcavationSquare [
   field SFString   name         "excavation_square"
   field SFVec3f    translation  0 0 0
   field SFRotation rotation     0 1 0 0
-  field SFBool     flipped      FALSE
   field SFFloat    POSITION     -0.4
   field SFFloat    MIN_STOP     -0.401426
-  field SFFloat    MAX_STOP     2
+  field SFFloat    MAX_STOP     2.6
   field SFString{"yellow1", "yellow2", "purple1", "purple2", "red"}  frontTexture  "yellow1"
 ]
 {
@@ -95,7 +94,7 @@ Solid {
       }
       endPoint Solid {
         translation 0 -0.0485 0.02
-        rotation 1 0 0 %<= (fields.flipped.value) ? 3.2 : -0.4 >%
+        rotation 1 0 0 -0.4
         children [
           Transform {
             translation 0 0 0.064
